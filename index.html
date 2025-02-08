@@ -1,0 +1,234 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <form id="resumeForm"></form>
+    <div class="resume-container">
+        <!-- Left Section -->
+        <div id="resume-display" class="left-section">
+            <h1>Dynamic Resume</h1>
+
+            <fieldset class="fieldset">
+                <legend class="Certificate">Personal Information</legend>
+                <p><label for="name">Name :</label>
+                <input class="inputRightInfo" type="text" id="name" placeholder="Enter your Name" required></p>
+
+                <p><label for="cnic">CNIC :</label>
+                <input class="inputRightInfo" type="text" id="cnic" placeholder="Enter your CNIC" required></p>
+
+                <p><label for="residence">Residence :</label>
+                <input class="inputRightInfo" type="text" id="residence" placeholder="Enter your Residence" required></p>
+
+                <p><label for="dob">Date of Birth :</label>
+                <input class="inputRightInfo" type="date" id="dob" required></p>
+
+                <p><label for="contact">Contact No :</label>
+                <input class="inputRightInfo" type="tel" id="contact" placeholder="Enter your Contact Number" required></p>
+
+                <p><label for="email">Email :</label>
+                <input class="inputRightInfo" type="email" id="email" placeholder="Enter your Email" required></p>
+
+                <p><label for="city">City :</label>
+                <input class="inputRightInfo" type="text" id="city" placeholder="Enter your city" required></p>
+
+                <p class="inputgender"> Gender:
+                    Male <input type="radio" id="male" name="gender"  placeholder="text" value="male" required>
+                    Female <input type="radio" id="female" name="gender"  placeholder="text"   value="female" required>
+                </p>
+            </fieldset>
+            
+            <!-- Education Section -->
+            <fieldset class="fieldset1">
+                <legend>Education</legend>
+                <textarea class="inputRightInfo" id="education" name="education" placeholder="Enter your Education" required></textarea>
+            </fieldset>
+
+            <!-- Work Experience Section -->
+            <fieldset class="fieldset1">
+                <legend>Work Experience</legend>
+                <textarea class="inputRightInfo" id="workExperience" name="workExperience" placeholder="Enter your Work Experience" required></textarea>
+            </fieldset>
+
+            <!-- Projects Section -->
+            <fieldset class="fieldset1">
+                <legend>Projects</legend>
+                <textarea class="inputRightInfo" id="projectsDetails" name="projectsDetails" placeholder="Enter your Projects" required></textarea>
+            </fieldset>
+
+            <!-- Hobbies Section -->
+            <fieldset class="fieldset1">
+                <legend>Hobbies</legend>
+                <textarea class="inputRightInfo" id="hobbies" name="hobbies" placeholder="Enter your Hobbies" required></textarea>
+            </fieldset>
+        </div>
+
+
+
+
+       
+         <!-- right Section -->
+         <div class="right-section">
+
+            <div id="resume-container"  >
+        
+                    <fieldset class="objective">
+                        <legend class="  "  >Profile Picture</legend>
+                        
+                            <!-- <input type="file" id="profilePicture" name="profilePicture" accept="image/*"><b></b>--->
+                            <input  class="inputRightInfo" type="file" id="imageInput" placeholder="Picture" onchange="previewImage(event)">
+                               
+                            <img src="" alt=" Picture" class="img-pic">
+                    </fieldset>
+
+                <!-- Career Objective -->
+                <fieldset class="objective">
+                    <legend class="Career">Career Objective</legend>
+                    <textarea class="inputRightInfo" id="objective" name="objective" placeholder="Enter your Objective" required></textarea>
+                </fieldset>
+
+                <!-- Certifications -->
+                <fieldset class="Certificates">
+                    <legend class="Certificate">Certifications</legend>
+                    <textarea class="inputRightInfo" id="certifications" name="certifications" placeholder="Enter your Certifications" required></textarea>
+                </fieldset>
+
+                <!-- Skills Section -->
+            <section id="skills">
+                <h2 class="skis">Skill Sets</h2>
+
+                <fieldset  class="Certificates">
+                    <legend  class="Certificate">Frontend Technologies</legend>
+                    <textarea  class="inputRightInfo" id="frontendTechnologies" name="frontendTechnologies" placeholder="Technologies" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="html">HTML</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar html-bar" style="width: 95%;"></div>
+                    </div>
+                    <span class="percentage">95%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="css">CSS</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar css-bar" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="typescript">TypeScript</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar typescript-bar" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+
+                
+                <div class="skill">
+                    <label for="next.js">Next.js</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar next.js-bar" style="width: 100%;"></div>
+                    </div>
+                    <span class="percentage">100%</span>
+                </div>
+
+
+                <div class="skill">
+                    <label for="git">GitHub</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar git-bar" style="width: 80%;"></div>
+                    </div>
+                    <span class="percentage">80%</span>
+                </div>
+
+                <!-- Problem Solving -->
+                <fieldset  class="Certificates">
+                    <legend>Problem Solving</legend>
+                    <textarea  class="inputRightInfo" id="problemSolving" name="problemSolving" placeholder="Problem Solving" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="analyticalThinking">Analytical Thinking</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar analytical-thinking-bar" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+
+                <div class="skill">
+                    <label for="debugging">Debugging</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar debugging-bar" style="width: 95%;"></div>
+                    </div>
+                    <span class="percentage">95%</span>
+                </div>
+
+                <h4 class="pss">Soft Skills</h4>
+                <fieldset  class="Certificates">
+                    <legend  class="Certificate">Soft Skills</legend>
+                
+                    <textarea class="inputRightInfo" id="softSkills" name="softSkills" placeholder="Skills" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="teamworkCommunication">Teamwork, Communication</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar communication-bar" style="width: 90%;"></div>
+                    </div>
+                    <span class="percentage">90%</span>
+                </div>
+
+                
+                <fieldset class="Certificates">
+                    <legend  class="Certificate">Design & Prototyping</legend>
+                    <textarea  class="inputRightInfo" id="designPrototyping" name="designPrototyping" placeholder="Design & Prototyping" required></textarea><br>    
+                </fieldset>
+
+                <div class="skill">
+                    <label for="figmaResponsiveDesign">Figma, Responsive Design</label>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar figma-bar" style="width: 85%;"></div>
+                    </div>
+                    <span class="percentage">85%</span>
+                </div>
+            </section>
+
+               
+                <!-- Generate Resume Button -->
+                <fieldset class="fieldsetbtn">
+                    <legend>Button</legend>
+                                    
+                    <form id="resumeForm" onsubmit="generateResume(event)">
+                        <button   class="inputRightInfo" type="submit">Generate Resume</button>
+                    </div>
+                    </form>
+                
+                </fieldset>
+            <!-- Resume Output Display -->
+ <div class="generate" id="resumeOutput">
+    <!-- Generated resume details will appear here -->
+</div>
+            
+        </div>
+    </div>
+   
+ 
+
+
+    <script src="script.js"></script>
+
+
+ 
+      
+</body>
+
+</html>
+
